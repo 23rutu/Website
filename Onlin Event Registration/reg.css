@@ -1,0 +1,179 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('regform\ bg.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Glowing Cyan Description Box */
+.description-box {
+    background: rgba(0, 255, 255, 0.1); /* Light cyan transparent */
+    color: #00ffff; /* Cyan text */
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0, 255, 255, 0.5); /* Neon glow */
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    animation: glow-pulse 2s infinite alternate;
+}
+
+/* Glow Pulse Animation */
+@keyframes glow-pulse {
+    from {
+        box-shadow: 0 0 10px #00ffff, 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px #00ffff, 0 0 40px rgba(0, 255, 255, 0.7);
+    }
+}
+
+/* Header Styling */
+.description-box h3 {
+    font-size: 22px;
+    color: #00ffff;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+/* Bullet Points and Icons */
+.description-box ul {
+    padding-left: 25px;
+}
+
+.description-box li {
+    margin-bottom: 10px;
+    list-style: none;
+    position: relative;
+    color: white; /* Ensure readability */
+}
+
+/* Adding futuristic bullets */
+.description-box li::before {
+    content: "➤";
+    color: #00ffff;
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+
+/* Centering Container */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Registration Box */
+.container {
+    background: rgba(44, 41, 41, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(221, 183, 223, 0.9);
+}
+
+button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #15a8ad;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #db51e7;
+}
+
+/* Table Styling */
+h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Table Container */
+.table-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensure it fits within the form */
+    overflow-x: auto; /* Allow scrolling if needed */
+}
+
+/* Table Styling */
+table {
+    width: 100%; /* Match container width */
+    max-width: 400px; /* Keep width consistent */
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    word-wrap: break-word;
+    table-layout: fixed; /* Fix column widths */
+}
+
+/* Table content styling */
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #140000;
+    word-break: break-word; /* Ensure text breaks properly */
+}
+
+/* Table header */
+th {
+    background-color: #ee94da;
+    font-weight: bold;
+}
+
+/* Row hover effect */
+tr:hover {
+    background-color: rgba(56, 48, 48, 0.3);
+}

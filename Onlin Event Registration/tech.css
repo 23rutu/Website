@@ -1,0 +1,41 @@
+/* Import Noto Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+    
+    /* Background Image */
+    background-image: url('tech.png'); /* Replace with your image file */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white; /* Ensure text is visible */
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;  /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+}
+
+/* Container for dropdowns */
+.container {
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Styling for labels and select boxes */
+label {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+select {
+    font-family: 'Noto Sans', sans-serif; /* Apply font to dropdown */
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Events</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle, #000000, #1a002d);
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .event {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            border-left: 5px solid #ff00ff;
+            box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.6);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .event:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.8);
+            border-left: 5px solid cyan;
+        }
+        h2 {
+            color: #ff00ff;
+            text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8);
+        }
+        label {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        select {
+            font-size: 1.1em;
+            padding: 8px;
+            background: #000;
+            color: white;
+            border: 2px solid #ff00ff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, border 0.3s;
+        }
+        select:hover {
+            background: #1a002d;
+            border: 2px solid cyan;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        
+        <div id="events">
+            <div class="event" data-year="2023">
+                <h2>InnovateX 2023</h2>
+                <p><b>InnovateX 2023</b> was a hub of innovation, bringing together tech enthusiasts, developers, and creators.<br>  
+                    Participants explored cutting-edge projects, engaged in exciting hackathons, and attended inspiring tech talks.<br>  
+                    The event showcased the future of AI, robotics, and digital transformation.<br>  
+                    <b>Innovate, collaborate, and lead the future – that was the spirit of InnovateX 2023! 🚀</b></p>
+            </div>
+            <div class="event" data-year="2022">
+                <h2>AthloniX 2022</h2>
+                <p><b>AthloniX 2022</b> was the ultimate battle of champions, bringing together athletes, fitness enthusiasts, and sports lovers.<br>  
+                    Participants showcased their strength, speed, and skills in thrilling competitions and high-energy challenges.<br>  
+                    The event celebrated teamwork, perseverance, and the spirit of true sportsmanship.<br>  
+                    <b>Rise, compete, and conquer – that was the essence of AthloniX 2022! 🏆🔥</b></p>
+            </div>
+            <div class="event" data-year="2021">
+                <h2>Kala Dhara 2021</h2>
+                <p><b>Kala Dhara 2021</b> was a vibrant celebration of culture and creativity, bringing together artists, performers, and art enthusiasts.<br>  
+                    The event showcased mesmerizing dance, soulful music, and breathtaking artistic expressions.<br>  
+                    It was a fusion of tradition and modernity, highlighting the richness of diverse cultures.<br>  
+                    <b>Experience, express, and embrace the art – that was the spirit of Kala Dhara 2021! 🎭🎨✨</b></p>
+            </div>
+            <div class="event" data-year="2021">
+                <h2>CodeCon: Battle of Algorithms</h2>
+                <p>A competitive coding event where students participated in a 3-round coding challenge covering DSA, AI-based problem-solving, and real-world application development. The final round was a team-based debugging contest where participants had to fix a broken project within a time limit. Industry professionals judged the event, and winners received cash prizes and internship offers.👨‍💻🏅</p>
+            </div>
+            <div class="event" data-year="2020">
+                <h2>Mystery Quest: Murder Case Investigation</h2>
+                <p>A real-life detective challenge where teams solved a staged murder mystery using logical reasoning, forensic clues, and witness statements. Each team had to interrogate actors (playing suspects), analyze digital footprints, and use tech tools like QR codes and online databases to crack the case. The first team to find the real culprit won prizes.🎁</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        function filterEvents() {
+            let year = document.getElementById("yearFilter").value;
+            let events = document.querySelectorAll(".event");
+            events.forEach(event => {
+                if (year === "all" || event.getAttribute("data-year") === year) {
+                    event.style.display = "block";
+                } else {
+                    event.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

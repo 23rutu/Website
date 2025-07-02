@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+    <style>
+        /* Background Animation */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #000000, #1a1a2e, #2a0845);
+            background-size: 300% 300%;
+            animation: gradientAnimation 8s infinite alternate;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        /* Header */
+        header {
+            background: black;
+            color: magenta;
+            padding: 20px;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 0px 0px 12px magenta;
+            border-bottom: 4px solid magenta;
+        }
+
+        /* Event Cards */
+        .event {
+            background: rgba(10, 10, 10, 0.9);
+            color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 0 15px cyan;
+            transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+            border: 2px solid magenta;
+            animation: floating 3s infinite ease-in-out alternate;
+        }
+        .event:hover {
+            box-shadow: 0 0 20px magenta;
+            border: 2px solid cyan;
+            transform: scale(1.03);
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-10px); }
+        }
+
+        /* Event Titles */
+        .event h2 {
+            font-size: 1.8rem;
+            color: cyan;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 12px cyan;
+        }
+
+        /* Event Descriptions */
+        .event p {
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .event {
+                width: 90%;
+            }
+            header {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Upcoming Events
+    </header>
+    <main>
+        <div id="events">
+            <div class="event" data-year="2025">
+                <h2>TechVerse 2025 – <b>Where Innovation Meets the Future</b></h2>
+                <p><b>TechVerse</b> is an electrifying annual tech fest that brings together brilliant minds,<br>
+                    cutting-edge innovations, and futuristic ideas.<br>
+                    A platform where technology enthusiasts, developers, and innovators showcase their skills<br>
+                    and explore the latest advancements in the tech world.</p>
+            </div>
+            <div class="event" data-year="2025">
+                <h2>Kala Utsav 2025 – A Celebration of Art & Culture!</h2>
+                <p><b>Kala Utsav</b> is a vibrant annual cultural fest that celebrates the essence of art, music, dance, and traditions.<br>
+                    A grand stage where creativity meets culture, showcasing the rich diversity of artistic expressions.</p>
+            </div>
+            <div class="event" data-year="2025">
+                <h2>Sportopia 2025 – Unleash the Champion in You!</h2>
+                <p><b>Sportopia</b> is the ultimate sports fest where passion, determination, and adrenaline come together!<br>
+                    A grand arena for athletes, fitness enthusiasts, and sports lovers to showcase their skills<br>
+                    in a series of electrifying competitions.</p>
+            </div>
+            <div class="event" data-year="2026">
+                <h2>Ultimate College Showdown 2026 - Obstacle Race Challenge </h2>
+                <p><b>The Ultimate College Showdown</b> is a high-energy obstacle race that tests participants' strength, agility, and endurance. The race features a speed dash with hurdles, a strength zone with rope climbing and tire flipping, and the final Ultimate Gauntlet, where competitors crawl through a mud pit, scale a wall, and solve a puzzle. The fastest and most resilient participants will be crowned champions, winning medals, gym memberships, and exclusive college merchandise.</p>
+            </div>
+            <div class="event" data-year="2027">
+                <h2>Bollywood vs. Hollywood 2027 - Ultimate Lip-Sync Battle</h2>
+                <p><b>The Bollywood vs. Hollywood Ultimate Lip-Sync Battle</b> is an exciting competition where students bring iconic movie songs to life with energetic performances, costumes, and choreography. Participants, solo or in teams, take on theme-based challenges, embodying genres like romance, action, or retro. The event culminates in a thrilling final face-off, with winners earning movie tickets, shopping vouchers, and a feature on the college’s social media.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

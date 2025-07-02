@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration </title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Event Registration for Debugging Challenge 🚀</h2>
+        <div class="description-box">
+            <h3>🐞 Debugging Challenge 🐞</h3>
+            <p><b>📌 What to Do:</b></p>
+            <ul>
+                <li>💻 Provide participants with a buggy piece of code in Python, C, or Java.</li>
+                <li>⏳ They must identify and fix the errors within a given time limit.</li>
+                <li>🏆 Points are awarded based on the number of errors fixed and the correctness of the solution.</li>
+            </ul>
+        </div>
+
+        
+        <form id="registrationForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="event">Select Event:</label>
+            <select id="event">
+                <option value="Tech Treasure Hunt">Tech Treasure Hunt</option>
+                <option value="Debugging Challenge">Debugging Challenge</option>
+                <option value="Tech Pictionary">Tech Pictionary</option>
+                <option value="Cyber Escape Room">Cyber Escape Room</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <h3>Registered Participants</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Event</th>
+                </tr>
+            </thead>
+            <tbody id="participantList">
+                <!-- Participants will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="2regscript.js"></script>
+</body>
+</html>

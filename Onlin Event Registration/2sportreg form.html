@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Event Registration for  Blindfold Penalty Shootout 🎯</h2>
+        <div class="description-box">
+            <h3>⚽Blindfold Penalty Shootout⚽</h3>
+            <p><b>📌 What to Do:</b></p>
+            <ul>
+                <li>🥅 Players take penalty shots (football) while blindfolded.</li>
+                <li>🗣️ A teammate can guide them using verbal directions, but no physical help.</li>
+                <li>🏆 The player who scores the most goals wins!</li>
+            </ul>
+        </div>
+        <form id="registrationForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="event">Select Event:</label>
+            <select id="event">
+                <option value="Reverse Relay Race">Reverse Relay Race</option>
+                <option value="Blindfold Penalty Shootout">Blindfold Penalty Shootout</option>
+                <option value="Dizzy Basketball Challenge">Dizzy Basketball Challenge</option>
+                <option value="Obstacle Course Challenge">Obstacle Course Challenge</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <h3>Registered Participants</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Event</th>
+                </tr>
+            </thead>
+            <tbody id="participantList">
+                <!-- Participants will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="2sportreg script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('ok.jpg') no-repeat center center/cover;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding-top: 60px; /* Push content down to make space for header */
+        }
+        header {
+            background: url('ok.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .box {
+            background: url('ok.jpg') no-repeat center center/cover;
+            padding: 20px;
+            width: 300px;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .box:hover {
+            transform: scale(1.1);
+        }
+        .textbox {
+            margin-top: 10px;
+            padding: 10px;
+            width: 80%;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: background 0.3s ease-in-out;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .textbox:hover {
+            background: lightgray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <div class="box" onclick="navigate('tech.html')">
+            <img src="tech img.jpg" alt="Image 1">
+            <div class="textbox">Register for Tech Events</div>
+        </div>
+        <div class="box" onclick="navigate('culreg.html')">
+            <img src="cultural img.jpg" alt="Image 2">
+            <div class="textbox">Register for Cultural Events</div>
+        </div>
+        <div class="box" onclick="navigate('sportsreg.html')">
+            <img src="sports.jpg" alt="Image 3">
+            <div class="textbox">Register for Sports Events</div>
+        </div>
+    </main>
+    <script>
+        function navigate(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
